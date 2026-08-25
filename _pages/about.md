@@ -34,18 +34,19 @@ Link to your social media connections, too. This theme is set up to use [Font Aw
 
 
 <style>
-/* 1. 强制替换主题色（常春藤绿） */
+/* 1. 强制替换主题色（学术深绿） */
 :root {
-  --global-theme-color: #2e8b57 !important;
+  --global-theme-color: #1a523b !important; 
 }
 
-/* 2. 横幅样式 */
+/* 2. 横幅样式（700px高，纯净原图显示） */
 .hero-banner {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 350px;
+  height: 700px; 
+  /* 【关键修改】：去掉了所有滤镜，直接呼叫你真实的图片名字（严格匹配大写 .JPG） */
   background-image: url('/assets/img/IMG_2568.JPG');
   background-size: cover;
   background-position: center;
@@ -53,7 +54,7 @@ Link to your social media connections, too. This theme is set up to use [Font Aw
   pointer-events: none;
 }
 
-/* 3. 保护导航栏并把主页内容往下推 */
+/* 3. 保护导航栏并把主页内容拉上来 */
 header, nav {
   position: relative !important;
   z-index: 10 !important;
@@ -63,17 +64,7 @@ header, nav {
   z-index: 5 !important;
 }
 .post {
-  margin-top: 200px !important;
+  /* 头像和文字直接悬浮在图片上 */
+  margin-top: 80px !important; 
 }
 </style>
-
-<script>
-  // 黑科技：强行在网页最底层插入横幅，彻底无视系统原有的背景限制
-  document.addEventListener("DOMContentLoaded", function() {
-    if (!document.querySelector('.hero-banner')) {
-      var banner = document.createElement("div");
-      banner.className = "hero-banner";
-      document.body.insertBefore(banner, document.body.firstChild);
-    }
-  });
-</script>
