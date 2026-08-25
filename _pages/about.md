@@ -9,7 +9,7 @@ profile:
   image: myphoto.JPG
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>1140 Amsterdam Avet</p>
+    <p>1140 Amsterdam Ave</p>
     <p>NYC, NY 10027</p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
