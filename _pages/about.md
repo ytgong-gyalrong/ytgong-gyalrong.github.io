@@ -34,19 +34,23 @@ Link to your social media connections, too. This theme is set up to use [Font Aw
 
 
 <style>
-/* 1. 强制替换主题色（学术深绿） */
+/* 1. 强制纯黑主题色（经典、醒目） */
 :root {
-  --global-theme-color: #1a523b !important; 
+  --global-theme-color: #000000 !important; 
 }
 
-/* 2. 横幅样式（700px高，纯净原图显示） */
+/* 2. 学术感拉满：全局强行替换为 Serif 衬线字体 */
+body, h1, h2, h3, h4, h5, h6, p, a, div, span, li {
+  font-family: "Georgia", "Times New Roman", Times, serif !important;
+}
+
+/* 3. 横幅样式（高度加长，包住全部内容） */
 .hero-banner {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 700px; 
-  /* 【关键修改】：去掉了所有滤镜，直接呼叫你真实的图片名字（严格匹配大写 .JPG） */
+  height: 900px; /* 【拉长了背景图】：从 700 变 900，确保你的照片全部在背景里 */
   background-image: url('/assets/img/IMG_2568.JPG');
   background-size: cover;
   background-position: center;
@@ -54,7 +58,7 @@ Link to your social media connections, too. This theme is set up to use [Font Aw
   pointer-events: none;
 }
 
-/* 3. 保护导航栏并把主页内容拉上来 */
+/* 4. 保护排版 */
 header, nav {
   position: relative !important;
   z-index: 10 !important;
@@ -63,8 +67,10 @@ header, nav {
   position: relative !important;
   z-index: 5 !important;
 }
+
+/* 5. 头像和文字的位置微调 */
 .post {
-  /* 头像和文字直接悬浮在图片上 */
-  margin-top: 80px !important; 
+  /* 头像稍微往下挪了一点，不至于顶着天花板 */
+  margin-top: 150px !important; 
 }
 </style>
