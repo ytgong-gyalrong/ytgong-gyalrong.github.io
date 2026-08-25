@@ -9,7 +9,6 @@ profile:
   image: myphoto.JPG
   image_circular: false # crops the image to make it circular
   more_info: >
-    #<p>555 your office number</p>
     <p>1140 Amsterdam Avet</p>
     <p>NYC, NY 10027</p>
 
