@@ -46,7 +46,7 @@ Link to your social media connections, too. This theme is set up to use [Font Aw
   left: 0;
   width: 100%;
   height: 350px;
-  background-image: url('{{ "/assets/img/IMG_2568" | relative_url }}');
+  background-image: url('/assets/img/IMG_2568.JPG');
   background-size: cover;
   background-position: center;
   z-index: 0;
