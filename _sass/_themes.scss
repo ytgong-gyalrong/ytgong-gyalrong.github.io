@@ -1,0 +1,8 @@
+:root {
+  &[data-theme="light"] {
+    --global-theme-color: #2e8b57;
+  }
+  &[data-theme="dark"] {
+    --global-theme-color: #2e8b57;
+  }
+}
