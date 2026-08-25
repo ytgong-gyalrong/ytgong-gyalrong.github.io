@@ -15,14 +15,25 @@ body::before {
   left: 0;
   width: 100%;
   height: 350px; 
-  background-image: url('../assets/img/IMG_2568.JPG'); 
+  /* 【修正】：改成了绝对路径，确保一定能找到图片 */
+  background-image: url('/assets/img/IMG_2568.JPG'); 
   background-size: cover;       
   background-position: center;  
-  z-index: -1;                  
+  /* 【修正】：把图层拿上来，不再被网页底色盖住 */
+  z-index: 0; 
+  pointer-events: none; 
 }
 
-/* 2. 把头像和文字往下推 */
-div.container {
+/* 2. 保护最顶部的导航栏不被图片挡住 */
+header {
+  position: relative;
+  z-index: 2; 
+}
+
+/* 3. 把正文往下推，营造头像压在横幅底边的感觉 */
+div[role="main"] {
+  position: relative;
+  z-index: 1;
+  /* 如果你觉得头像压在图片上的位置不合适，依然可以改这个数字 */
   margin-top: 200px !important; 
-  background-color: transparent; 
 }
